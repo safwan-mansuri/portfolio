@@ -19,7 +19,7 @@ function App() {
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'column',
-    marginLeft: '100px'
+    marginLeft: '50px'
   }
 
   const imageStyle = {
@@ -35,25 +35,24 @@ function App() {
     marginTop: '100px'
   }
 
-  const imageDiv = {
-    marginLeft: '50px',
-  }
-
   const info = {
     marginTop: '80px',
+    textAlign: 'center'
   }
 
   const nameText = {
     fontSize: '50px',
-  }
-
-  const de = {
-    marginTop: '-40px',
-    marginLeft: '80px'
+    fontStyle: 'oblique',
+    letterSpacing: '3px',
+    marginRight: '50px',
   }
 
   const pr = {
     marginLeft: '20px',
+  }
+
+  const paraText = {
+    fontSize: '30px'
   }
 
   const resumeStyle = {
@@ -62,6 +61,7 @@ function App() {
   }
 
   const linkStyle = {
+    fontFamily: 'Poppins, sans-serif',
     textDecoration: 'none',
     fontStyle: 'serif',
     color: 'black',
@@ -71,7 +71,7 @@ function App() {
     <div className="App">
       <div style={resumeStyle}>
         <a 
-          href='https://my-resumess.s3.ap-south-1.amazonaws.com/SafwanMansuri%20.pdf?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRjBEAiBxy%2Fj3k8k2r1mfOI7F8OLaAlYD%2FRSLmSNdxnVvw839fAIgSLbGGJ0tN%2FTodyOd0HZUZ1VjrDi5Kg7GUZFyyl3b6TAq9gIIRhAAGgwzNDQ2MTI1NTMyMTkiDJ8M3qfytomNhwexwyrTAuO6AyGOuRppPUiQ5LuCBsAndyhumeutRgqJy5oPTvPKBjzZx%2B7m1oR%2FRY09%2B7t9nNKNWLOw%2BKL9m1rhq7bh6DBGpAIOqxvL9QG3sx9eI31cpTLn3hENzo1nm0ksS98P83IgptvNVF27CKjCOJTg6VhLvHT3xDbWgx2SYltA%2B2NQidysqOV%2FG2oVneRP1J5f2cjh82TISrgk2FmcTwT0obobxaNl5nGKWYKIfbayreuMnaW24nBOA%2F616Hs3iLLhhcW6F14cZYS%2FSq5p0yWirZ2kp%2B2u5ECxsPGO4Yeht1goM3fwBv6OiR%2Bkv0cTlRxepn5PuCagk87%2F4SrxetH90%2FZ3A1rwGsw%2Fk6BTlTvYs1Ru3WPUwv566hQChBcZ2xdni8Ktp6iqPs5H7PSviYN7a4oxCkZEWrkxUN4qy9pr0r5rCR6ttQKSH6fXi%2FxKbBrXOFwxljDs8PKFBjq0AueZc08WPz3injSVDouj73pLKyuYTPlXPbnY4kfBE6MmH9J1DuVEsRW6mhJOCUes5QXbwL2h9GnYSStwgUWOHkMTHA1hrmEe2EfsuWEkqa1F59yD9GDyCsDR6fHQ%2BGEEyRZY09hsLWQLDpBZ1FpQUaLaiaj7lHdfWEJVSmIc93u8q4waErqLihr2xw4iPAuFhaKRjoA%2FEdCATNliDFEApEpNZDtKkTGpbJ%2Bz68bVmey9%2F9b%2FOCZw5ejFaBAt9kGiGhD%2F4Fhwr37l1IjaAaKNYDzJnut4pZWEdSf1opmAcZ4HfWIlEPHqfmvTG78BH9BHaeImrypeqBbr8kIXugQUoljTzMqW7I7njg9LorzubRa2VfBiROIxB7kJsIHzlmkyCO5RIL%2FQHvuk3xycjAIQpsRbG0%2Bz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20210606T134156Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAVAPECIIBQOVS7M7R%2F20210606%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=c7ce2bd3c28f1bd635cd591195c946b69c5596d0c21b9d37ad057c622cc0acd0' 
+          href='https://drive.google.com/file/d/1Fd9fspzV6zbOY9XWIE3srXGZUPMZqqYk/view?usp=sharing' 
           style={linkStyle} 
           target='blank'> 
           VIEW RESUME 
@@ -80,12 +80,10 @@ function App() {
 
       <div style={landingContainer}>
         <div style={info}>
-          <h1 style={nameText}> Safwan Mansuri </h1> <br/>
-          <div style={de}>
-            <p>A Software Developer</p>
-          </div>
+          <h1 style={nameText}> Safwan Mansuri </h1>
+          <p style={paraText}>Software Developer</p>
         </div>
-        <div style={imageDiv}>
+        <div>
           <img src={safwan} alt="no img" style={imageStyle} />
         </div>
       </div>
