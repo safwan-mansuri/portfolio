@@ -2,9 +2,11 @@ import safwan from './safwan.png';
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import DarkModeToggle from "react-dark-mode-toggle";
 
 function App() {
   const [projects, setProjects] = useState([]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -14,6 +16,13 @@ function App() {
     }
     fetchProjects();
   })
+
+
+  const handleChange = () => {
+    console.log('hello');
+    setIsDarkMode(!isDarkMode);
+  }
+
 
   const containerStyle = {
     display: 'flex',
@@ -45,30 +54,43 @@ function App() {
     fontStyle: 'oblique',
     letterSpacing: '3px',
     marginRight: '50px',
+    color: isDarkMode ? '#fff' : 'black',
   }
 
   const pr = {
     marginLeft: '20px',
+    color: isDarkMode ? '#fff' : 'black',
   }
 
   const paraText = {
-    fontSize: '30px'
+    fontSize: '30px',
+    color: isDarkMode ? '#fff' : 'black',
   }
 
   const resumeStyle = {
     textAlign: 'center',
-    marginTop: '20px'
+    marginTop: '20px',
   }
 
   const linkStyle = {
     fontFamily: 'Poppins, sans-serif',
     textDecoration: 'none',
     fontStyle: 'serif',
-    color: 'black',
+    color: isDarkMode ? '#fff' : 'black',
   }
 
+  const appStyle = {
+    backgroundColor: isDarkMode ? 'black' : '#fff',
+  }
+
+
   return (
-    <div className="App">
+    <div className="App" style={appStyle}>
+      <DarkModeToggle
+        onChange={handleChange}
+        checked={isDarkMode}
+        size={80}
+      />
       <div style={resumeStyle}>
         <a 
           href='https://drive.google.com/file/d/1Fd9fspzV6zbOY9XWIE3srXGZUPMZqqYk/view?usp=sharing' 
